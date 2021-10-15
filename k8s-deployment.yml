@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rajini-deployment-new
+  labels:
+    app: rajini-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: rajini-app
+  template:
+    metadata:
+      labels:
+        app: rajini-app
+    spec:
+      containers:
+        - name: rajini-app
+          image: rajinikanth-0.0.1.jar
+          ports:
+            - containerPort: 8081

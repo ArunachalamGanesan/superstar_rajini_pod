@@ -1,0 +1,13 @@
+apiVersion: skaffold/v2beta24
+kind: Config
+metadata:
+  name: rajinikanth
+build:
+  artifacts:
+  - image: rajinikanth-0.0.1.jar
+    jib: {}
+  local: {}
+deploy:
+  kubectl:
+    manifests:
+    - k8s-deployment.yml
