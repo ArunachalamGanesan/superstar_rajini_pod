@@ -17,6 +17,7 @@ public class HelloController {
         String response = new String("Kanna nan oruthdava sonna nooru thadava sonna mathiri");
         log.info("response: {}",response);
         log.info("en character a purichaka matraye");
+        log.info("singam singala than varum");
         return new ResponseEntity<>(response, HttpStatus.OK);
     }
 }
